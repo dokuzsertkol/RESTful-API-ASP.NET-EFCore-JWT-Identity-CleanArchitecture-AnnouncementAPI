@@ -58,9 +58,9 @@ Custom authorization policies are used by the API to manage resource access:
 ### All API responses follow a custom JSON envelope with the following format:
 ```json
 {
-  "success": bool,  // Indicates whether the request was successful
-  "data": T?,  // Contains the response data
-  "message": string?  // Optional message describing the result
+  "success": true | false, // Indicates whether the request was successful
+  "data": {...} | [...] | null, // Contains the response data
+  "message": "string" | null // Optional message describing the result
 }
 ```
 ### Example 1: POST /api/login
@@ -107,7 +107,7 @@ Custom authorization policies are used by the API to manage resource access:
 {
   "success": true,
   "data": {
-    "announcements": \[
+    "announcements": [
       {
         "id": 3,
         "title": "my title",
@@ -116,8 +116,8 @@ Custom authorization policies are used by the API to manage resource access:
         "userId": "9c3b6a0a-b319-4ba6-be11-e910462b949e",
         "userName": "maymun"
       }
-    \],
-    "users": \[
+    ],
+    "users": [
       {
         "id": "9a244aed-185c-415b-afb9-32bd50df8a58",
         "userName": "armut"
@@ -126,7 +126,7 @@ Custom authorization policies are used by the API to manage resource access:
         "id": "9c3b6a0a-b319-4ba6-be11-e910462b949e",
         "userName": "maymun"
       }
-    \],
+    ],
     "id": 5,
     "name": "my group"
   },
