@@ -58,9 +58,9 @@ Custom authorization policies are used by the API to manage resource access:
 ### All API responses follow a custom JSON envelope with the following format:
 ```json
 {
-  "success": true | false,   // Indicates whether the request was successful
-  "data": {...} | [...] | null,  // Contains the response data
-  "message": "string" | null  // Optional message describing the result
+  "success": bool,  // Indicates whether the request was successful
+  "data": T?,  // Contains the response data
+  "message": string?  // Optional message describing the result
 }
 ```
 ### Example 1: POST /api/login
