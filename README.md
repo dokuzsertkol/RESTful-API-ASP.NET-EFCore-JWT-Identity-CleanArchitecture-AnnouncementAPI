@@ -30,29 +30,29 @@ Custom authorization policies are used by the API to manage resource access:
 
 ## API Endpoints
 ### Announcement Controller
-GET /api/announcements/{announcementId} : Get an announcement
-PUT /api/announcements/{announcementId} : Update an announcement
-DELETE /api/announcements/{announcementId} : Delete an announcement
+- GET /api/announcements/{announcementId} : Get an announcement
+- PUT /api/announcements/{announcementId} : Update an announcement
+- DELETE /api/announcements/{announcementId} : Delete an announcement
 
 ### AppUser Controller
-GET /me/groups : List groups of the current user (with query)
-DELETE /me/groups/{groupId} : Leave a group
-GET /me/announcements : List all announcements of the user (with query)
+- GET /me/groups : List groups of the current user (with query)
+- DELETE /me/groups/{groupId} : Leave a group
+- GET /me/announcements : List all announcements of the user (with query)
 
 ### Auth Controller
-POST /api/auth/register : Register a new user
-POST /api/auth/login : User login
+- POST /api/auth/register : Register a new user
+- POST /api/auth/login : User login
 
 ### Group Controller
-POST /api/groups : Create a new group
-GET /api/groups/{groupId} : Get a group with its announcements and users (with query)
-PUT /api/groups/{groupId} : Update a group
-DELETE /api/groups/{groupId} : Delete a group
-GET /api/groups/{groupId}/users : List users of a group (with query)
-POST /api/groups/{groupId}/users : Add a user to a group
-DELETE /api/groups/{groupId}/users/{userId} : Remove a user from a group
-POST /api/groups/{groupId}/announcements : Add an announcement to a group
-GET /api/groups/{groupId}/announcements : List announcements in a group (with query)
+- POST /api/groups : Create a new group
+- GET /api/groups/{groupId} : Get a group with its announcements and users (with query)
+- PUT /api/groups/{groupId} : Update a group
+- DELETE /api/groups/{groupId} : Delete a group
+- GET /api/groups/{groupId}/users : List users of a group (with query)
+- POST /api/groups/{groupId}/users : Add a user to a group
+- DELETE /api/groups/{groupId}/users/{userId} : Remove a user from a group
+- POST /api/groups/{groupId}/announcements : Add an announcement to a group
+- GET /api/groups/{groupId}/announcements : List announcements in a group (with query)
 
 ## Sample API Responses
 ### All API responses follow a custom JSON envelope with the following format:
