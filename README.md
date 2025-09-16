@@ -56,12 +56,15 @@ GET /api/groups/{groupId}/announcements : List announcements in a group (with qu
 
 ## Sample API Responses
 ### All API responses follow a custom JSON envelope with the following format:
+```json
 {
   "success": true | false,   // Indicates whether the request was successful
   "data": {...} | [...] | null,  // Contains the response data
   "message": "string" | null  // Optional message describing the result
 }
+```
 ### Example 1: POST /api/login
+```json
 {
   "success": true,
   "data": {
@@ -72,7 +75,9 @@ GET /api/groups/{groupId}/announcements : List announcements in a group (with qu
   },
   "message": "You have logged in successfully."
 }
+```
 ### Example 2: POST /api/groups (after logged in)
+```json
 {
   "success": true,
   "data": { 
@@ -81,7 +86,9 @@ GET /api/groups/{groupId}/announcements : List announcements in a group (with qu
   }, 
   "message": "The group has been created successfully."
 }
+```
 ### Example 3: POST /api/groups/9/announcements (after logged in, if you are the admin of the group)
+```json
 {
   "success": true,
   "data": {
@@ -94,7 +101,9 @@ GET /api/groups/{groupId}/announcements : List announcements in a group (with qu
   },
   "message": "The announcement has been added successfully."
 }
+```
 ### Example 4: GET /api/groups/9 (after logged in, if you are a member of the group)
+```json
 {
   "success": true,
   "data": {
@@ -123,6 +132,7 @@ GET /api/groups/{groupId}/announcements : List announcements in a group (with qu
   },
   "message": null
 }
+```
 
 ## Project Structure
 The project follows Clean Architecture, divided into four main layers:
